@@ -1,0 +1,39 @@
+// Storage for queues and user data
+const queues = {
+    na: { testers: [], queue: [] },
+    eu: { testers: [], queue: [] },
+    as_au: { testers: [], queue: [] },
+    za: { testers: [], queue: [] }
+};
+
+const MAX_TESTERS = 3;
+const MAX_QUEUE = 20;
+
+const queueMessages = {
+    na: null,
+    eu: null,
+    as_au: null,
+    za: null
+};
+
+const lastStopTimestamps = {
+    na: null,
+    eu: null,
+    as_au: null,
+    za: null
+};
+
+const verifiedUsers = new Map();
+const waitlistUsers = new Map();
+const userTestHistory = new Map();
+
+module.exports = {
+    queues,
+    MAX_TESTERS,
+    MAX_QUEUE,
+    queueMessages,
+    lastStopTimestamps,
+    verifiedUsers,
+    waitlistUsers,
+    userTestHistory
+};
